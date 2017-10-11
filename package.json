@@ -1,0 +1,93 @@
+{
+  "name": "Holipay-API",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint ./src/server.js",
+    "migrate:make": "NODE_ENV=development babel-node --presets stage-2 node_modules/knex/bin/cli.js -- migrate:make",
+    "migrate:dev": "NODE_ENV=development babel-node --presets stage-2 node_modules/knex/bin/cli.js -- migrate:latest",
+    "migrate:prod": "NODE_ENV=production babel-node --presets stage-2 node_modules/knex/bin/cli.js -- migrate:latest",
+    "migrate:test": "NODE_ENV=test babel-node --presets stage-2 node_modules/knex/bin/cli.js -- migrate:latest",
+    "nodemon": "nodemon",
+    "seed:dev": "NODE_ENV=production babel-node --presets stage-2 node_modules/knex/bin/cli.js -- seed:run",
+    "seed:prod": "NODE_ENV=development babel-node --presets stage-2 node_modules/knex/bin/cli.js -- seed:run",
+    "seed:test": "NODE_ENV=test babel-node --presets stage-2 node_modules/knex/bin/cli.js -- seed:run",
+    "seed": "npm run seed:dev",
+    "start:dev": "NODE_ENV=development nodemon",
+    "start:prod": "NODE_ENV=production node dist/server.js",
+    "start:test": "NODE_ENV=test nodemon",
+    "start": "npm run start:dev",
+    "test": "npm run unit",
+    "unit": "mocha --compilers js:babel-core/register src/tests/unit --timeout 50000",
+    "e2e": "mocha --compilers js:babel-core/register src/tests/e2e --timeout 50000"
+  },
+  "keywords": [
+    "holipay"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "base-64": "^0.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "express-rate-limit": "^2.9.0",
+    "express-validator": "^3.2.1",
+    "helmet": "^3.8.1",
+    "jsonwebtoken": "^8.0.1",
+    "knex": "^0.13.0",
+    "moment": "^2.18.1",
+    "mysql": "^2.14.1",
+    "objection": "^0.8.9",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-check-es2015-constants": "^6.22.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
+    "babel-plugin-transform-es2015-computed-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-duplicate-keys": "^6.24.1",
+    "babel-plugin-transform-es2015-for-of": "^6.23.0",
+    "babel-plugin-transform-es2015-function-name": "^6.24.1",
+    "babel-plugin-transform-es2015-literals": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-es2015-object-super": "^6.24.1",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-es2015-sticky-regex": "^6.24.1",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-plugin-transform-es2015-typeof-symbol": "^6.23.0",
+    "babel-plugin-transform-es2015-unicode-regex": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.7.2",
+    "mocha": "^3.5.0",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.12.0"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "js",
+    "ignore": [
+      "src/tests/**/*.spec.js",
+      "src/tests/**/*.e2e.js",
+      "node_modules"
+    ],
+    "exec": "babel-node ./src/server.js"
+  }
+}

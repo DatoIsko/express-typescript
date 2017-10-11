@@ -1,0 +1,39 @@
+Date and Time: 2017-09-29 19:15:48
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 19:16:20
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 19:25:48
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 19:26:49
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 19:27:04
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 19:54:29
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 20:09:12
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass is not defined
+
+Date and Time: 2017-09-29 20:11:13
+                     Actual Status: undefined
+                     Developer Message: Something went wrong. Try again.
+                     Error Message: User.relationMappings.tokens: modelClass: ./token is an invalid file path to a model class
